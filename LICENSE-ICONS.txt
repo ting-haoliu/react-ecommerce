@@ -1,0 +1,2 @@
+All icons in src/assets are from Heroicons (https://heroicons.com)
+License: MIT
