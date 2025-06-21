@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import logo from '../assets/stylenest.svg';
 
@@ -26,7 +27,11 @@ const MobileMenu = ({ onClose }) => {
                   strokeWidth="1.5"
                   stroke="currentColor"
                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  <path
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     d="M6 18 18 6M6 6l12 12"
+                  />
                </svg>
             </button>
          </div>
@@ -48,6 +53,13 @@ const MobileMenu = ({ onClose }) => {
          </div>
       </div>
    );
+};
+
+MobileMenu.propTypes = {
+   onClose: PropTypes.func.isRequired,
+};
+MobileMenu.defaultProps = {
+   onClose: () => {},
 };
 
 export default MobileMenu;
