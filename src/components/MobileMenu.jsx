@@ -38,15 +38,24 @@ const MobileMenu = ({ onClose }) => {
 
          {/* Navigation Links */}
          <div className="flex flex-col gap-y-6 mt-6">
-            <Link to="/" className="text-sm/6 font-semibold text-gray-900">
+            <Link
+               to="/"
+               className="text-sm/6 font-semibold text-gray-900"
+               onClick={onClose}
+            >
                Home
             </Link>
-            <Link to="/shop" className="text-sm/6 font-semibold text-gray-900">
+            <Link
+               to="/shop"
+               className="text-sm/6 font-semibold text-gray-900"
+               onClick={onClose}
+            >
                Shop
             </Link>
             <Link
                to="#"
                className="text-sm/6 font-semibold text-gray-900 border-t-2 border-gray-200 pt-6"
+               onClick={onClose}
             >
                Log in <span aria-hidden="true">&rarr;</span>
             </Link>

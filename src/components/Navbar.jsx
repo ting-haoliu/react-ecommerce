@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import logo from '../assets/stylenest.svg';
 import MobileMenu from './MobileMenu';
+import { ShopContext } from '../contexts/ShopContext';
 
 const Navbar = () => {
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+   const { totalItems } = useContext(ShopContext);
 
    return (
       <>
@@ -24,7 +26,10 @@ const Navbar = () => {
                <Link to="/" className="text-sm/6 font-semibold text-gray-900">
                   Home
                </Link>
-               <Link to="/shop" className="text-sm/6 font-semibold text-gray-900">
+               <Link
+                  to="/shop"
+                  className="text-sm/6 font-semibold text-gray-900"
+               >
                   Shop
                </Link>
                <Link to="#" className="text-sm/6 font-semibold text-gray-900">
@@ -57,7 +62,7 @@ const Navbar = () => {
                      </svg>
 
                      <span className="absolute -top-1 -right-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-                        0
+                        {totalItems}
                      </span>
                   </Link>
                </div>
@@ -88,7 +93,9 @@ const Navbar = () => {
          </nav>
 
          {/* Mobile Menu */}
-         {mobileMenuOpen && <MobileMenu onClose={() => setMobileMenuOpen(false)} />}
+         {mobileMenuOpen && (
+            <MobileMenu onClose={() => setMobileMenuOpen(false)} />
+         )}
       </>
    );
 };
