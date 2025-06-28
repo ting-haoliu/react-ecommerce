@@ -1,15 +1,13 @@
 import { useContext } from 'react';
 
-import { ShopContext } from '../contexts/ShopContext';
+import { CartContext } from '../contexts/CartContext';
 
 const OrderSummary = () => {
-   const { currentBalance } = useContext(ShopContext);
+   const { currentBalance } = useContext(CartContext);
 
    return (
       <div className="bg-white p-4 rounded-lg border border-neutral-200 self-start w-full">
-         <h3 className="font-semibold text-2xl text-neutral-900 mb-8">
-            Order Summary
-         </h3>
+         <h3 className="font-semibold text-2xl text-neutral-900 mb-8">Order Summary</h3>
 
          <div className="flex justify-between mb-4">
             <span className="text-base text-neutral-600">Subtotal</span>

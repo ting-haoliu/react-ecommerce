@@ -1,7 +1,7 @@
-import { ShopProvider } from './ShopContext';
+import { CartProvider } from './CartContext';
 
 const AppProviders = ({ children }) => {
-   return <ShopProvider>{children}</ShopProvider>;
+   return <CartProvider>{children}</CartProvider>;
 };
 
 export default AppProviders;

@@ -2,9 +2,9 @@ import { createContext, useEffect, useMemo, useReducer } from 'react';
 
 import { cartReducer } from '../reducers/cartReducer';
 
-export const ShopContext = createContext();
+export const CartContext = createContext();
 
-export const ShopProvider = ({ children }) => {
+export const CartProvider = ({ children }) => {
    const initialState = [];
 
    const init = () => {
@@ -97,7 +97,7 @@ export const ShopProvider = ({ children }) => {
    // };
 
    return (
-      <ShopContext.Provider
+      <CartContext.Provider
          value={{
             cartItems,
             totalItems,
@@ -110,6 +110,6 @@ export const ShopProvider = ({ children }) => {
          }}
       >
          {children}
-      </ShopContext.Provider>
+      </CartContext.Provider>
    );
 };

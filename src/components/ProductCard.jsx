@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 
-import { ShopContext } from '../contexts/ShopContext';
+import { CartContext } from '../contexts/CartContext';
 
 const ProductCard = ({ product }) => {
    const handleShowDetails = () => {
@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
       window.alert(`Showing details for product ID: ${product.id}`);
    };
 
-   const { addToCart } = useContext(ShopContext);
+   const { addToCart } = useContext(CartContext);
 
    return (
       <div className="flex flex-col">

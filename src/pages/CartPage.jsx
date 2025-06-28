@@ -2,11 +2,11 @@ import { useContext } from 'react';
 
 import EmptyCart from '../components/EmptyCart';
 import OrderSummary from '../components/OrderSummary';
-import { ShopContext } from '../contexts/ShopContext';
+import { CartContext } from '../contexts/CartContext';
 
 const CartPage = () => {
    const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
-      useContext(ShopContext);
+      useContext(CartContext);
 
    return (
       <div className="h-full bg-gradient-to-b from-gray-50 to-[#d2d6db] p-4">
@@ -14,9 +14,7 @@ const CartPage = () => {
             <EmptyCart />
          ) : (
             <div className="bg-white rounded-md px-3 py-12">
-               <h2 className="font-semibold text-3xl text-neutral-900 mb-16">
-                  Shopping Cart
-               </h2>
+               <h2 className="font-semibold text-3xl text-neutral-900 mb-16">Shopping Cart</h2>
 
                <div className="flex flex-col lg:flex-row lg:gap-8">
                   <div className="lg:w-full lg:min-w-3xl lg:mb-0">
@@ -66,8 +64,7 @@ const CartPage = () => {
                                  </button>
                                  <div className="flex items-center gap-2 ml-auto">
                                     <span className="font-medium text-lg text-neutral-900">
-                                       ${' '}
-                                       {(item.price * item.quantity).toFixed(2)}
+                                       $ {(item.price * item.quantity).toFixed(2)}
                                     </span>
                                  </div>
                               </div>
