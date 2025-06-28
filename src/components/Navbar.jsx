@@ -22,19 +22,29 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex md:gap-x-12">
-               <Link to="/" className="text-sm/6 font-semibold text-gray-900">
-                  Home
-               </Link>
-               <Link
-                  to="/shop"
-                  className="text-sm/6 font-semibold text-gray-900"
-               >
-                  Shop
-               </Link>
-               <Link to="#" className="text-sm/6 font-semibold text-gray-900">
-                  Log in <span aria-hidden="true">&rarr;</span>
-               </Link>
+            <div className="hidden md:flex md:justify-between md:w-full">
+               <div className="flex items-center gap-x-6 pl-8">
+                  <Link
+                     to="/"
+                     className="text-sm/6 font-semibold text-gray-900"
+                  >
+                     Home
+                  </Link>
+                  <Link
+                     to="/shop"
+                     className="text-sm/6 font-semibold text-gray-900"
+                  >
+                     Shop
+                  </Link>
+               </div>
+               <div className="flex items-center gap-x-6 pr-6">
+                  <Link
+                     to="#"
+                     className="text-sm/6 font-semibold text-gray-900"
+                  >
+                     Log in <span aria-hidden="true">&rarr;</span>
+                  </Link>
+               </div>
             </div>
 
             {/* Mobile Menu Button and Shopping Cart Icon */}
