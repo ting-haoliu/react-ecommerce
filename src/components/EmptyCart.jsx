@@ -6,9 +6,7 @@ const EmptyCart = () => {
    return (
       <div className="flex flex-col bg-white rounded-md w-full h-full px-3 py-12">
          <div className="flex flex-col gap-16 grow">
-            <h2 className="font-semibold text-3xl text-neutral-900">
-               Shopping Cart
-            </h2>
+            <h2 className="font-semibold text-3xl text-neutral-900">Shopping Cart</h2>
 
             <div className="flex flex-col items-center gap-8 grow lg:flex-row lg:px-8">
                {/* Empty Cart Message */}
@@ -43,13 +41,8 @@ const EmptyCart = () => {
                      to="/shop"
                      className="flex items-center gap-1.5 bg-indigo-700 px-4 py-2.5 rounded"
                   >
-                     <span className="font-medium text-base text-white">
-                        Explore products
-                     </span>
-                     <span
-                        className="font-medium text-base text-white"
-                        aria-hidden="true"
-                     >
+                     <span className="font-medium text-base text-white">Explore products</span>
+                     <span className="font-medium text-base text-white" aria-hidden="true">
                         &rarr;
                      </span>
                   </Link>

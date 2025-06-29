@@ -33,7 +33,7 @@ export const cartReducer = (state, action) => {
       }
 
       default: {
-         return state;
+         throw new Error(`Unhandled action type: ${action.type}`);
       }
    }
 };

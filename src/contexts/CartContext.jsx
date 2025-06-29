@@ -1,4 +1,5 @@
 import { createContext, useEffect, useMemo, useReducer } from 'react';
+import PropTypes from 'prop-types';
 
 import { cartReducer } from '../reducers/cartReducer';
 
@@ -112,4 +113,8 @@ export const CartProvider = ({ children }) => {
          {children}
       </CartContext.Provider>
    );
+};
+
+CartProvider.propTypes = {
+   children: PropTypes.node.isRequired,
 };
