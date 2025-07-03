@@ -14,7 +14,9 @@ const CartPage = () => {
             <EmptyCart />
          ) : (
             <div className="bg-white rounded-md px-3 py-12">
-               <h2 className="font-semibold text-3xl text-neutral-900 mb-16">Shopping Cart</h2>
+               <h2 className="font-semibold text-3xl text-neutral-900 mb-16">
+                  Shopping Cart
+               </h2>
 
                <div className="flex flex-col lg:flex-row lg:gap-8">
                   <div className="lg:w-full lg:min-w-3xl lg:mb-0">
@@ -35,8 +37,6 @@ const CartPage = () => {
                               <h3 className="font-medium text-2xl text-neutral-900">
                                  {item.title}
                               </h3>
-
-                              <p>{item.description}</p>
 
                               <div className="flex items-center gap-4">
                                  <div className="w-32 flex justify-evenly items-center gap-3 bg-neutral-50 p-0.5 rounded-md border border-neutral-200">
@@ -64,7 +64,8 @@ const CartPage = () => {
                                  </button>
                                  <div className="flex items-center gap-2 ml-auto">
                                     <span className="font-medium text-lg text-neutral-900">
-                                       $ {(item.price * item.quantity).toFixed(2)}
+                                       ${' '}
+                                       {(item.price * item.quantity).toFixed(2)}
                                     </span>
                                  </div>
                               </div>

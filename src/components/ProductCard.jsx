@@ -21,9 +21,9 @@ const ProductCard = ({ product }) => {
             <img
                alt={product.title}
                src={product.image}
-               className="aspect-square rounded-lg bg-gray-200 object-contian group-hover:opacity-75 xl:aspect-7/8"
+               className="aspect-square rounded-lg bg-gray-200 group-hover:opacity-75 xl:aspect-7/8"
             />
-            <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
+            <h3 className="mt-4 text-xl text-gray-700">{product.title}</h3>
          </button>
 
          <p className="mt-1 text-lg font-medium text-gray-900">

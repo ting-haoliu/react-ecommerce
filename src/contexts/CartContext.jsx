@@ -30,7 +30,10 @@ export const CartProvider = ({ children }) => {
    }, [cartItems]);
 
    const currentBalance = useMemo(() => {
-      return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+      return cartItems.reduce(
+         (total, item) => total + item.price * item.quantity,
+         0
+      );
    }, [cartItems]);
 
    const addToCart = (product) => {
