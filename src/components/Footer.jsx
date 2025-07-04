@@ -15,7 +15,7 @@ const Footer = () => {
                   </Link>
                </div>
 
-               <div className="grid grid-cols-2 gap-8 text-center sm:gap-6 sm:grid-cols-3 md:gap-4 md:grid-cols-4">
+               <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:gap-4 md:grid-cols-4">
                   <section>
                      <h2 className="mb-4 text-sm font-semibold text-gray-700 uppercase">
                         Shopping Guide

@@ -26,17 +26,19 @@ const ProductCard = ({ product }) => {
             <h3 className="mt-4 text-xl text-gray-700">{product.title}</h3>
          </button>
 
-         <p className="mt-1 text-lg font-medium text-gray-900">
-            <span className="mr-1">$</span>
-            {product.price}
-         </p>
-         <button
-            type="button"
-            className="mt-2 rounded-3xl bg-yellow-300 px-4 py-2 text-black cursor-pointer hover:opacity-75"
-            onClick={() => addToCart(product)}
-         >
-            Add to Cart
-         </button>
+         <div className="flex items-center justify-between mt-4">
+            <p className="mt-1 text-lg font-medium text-gray-900">
+               <span className="mr-1">$</span>
+               {product.price}
+            </p>
+            <button
+               type="button"
+               className="mt-2 rounded-xl bg-yellow-300 px-4 py-2 text-black cursor-pointer hover:opacity-75"
+               onClick={() => addToCart(product)}
+            >
+               Add to Cart
+            </button>
+         </div>
       </div>
    );
 };
