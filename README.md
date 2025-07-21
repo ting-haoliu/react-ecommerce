@@ -1,12 +1,21 @@
-# React + Vite
+# React Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive shopping cart application built with React that demonstrates core concepts including component design, routing, state management, and API integration.
 
-Currently, two official plugins are available:
+## 🛒 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏠 **Home Page** and 🛍 **Shop Page**
+- 🧭 Persistent navigation bar showing total cart items
+- 🧾 Product cards with title, quantity input, increment/decrement buttons, and "Add to Cart"
+- 🧺 Real-time cart management with live total updates
+- 🌐 Product data fetched from FakeStore API (or similar)
+- ✅ Form and PropTypes validation
+- 🧪 Tested with React Testing Library
 
-## Expanding the ESLint configuration
+## ⚙️ Technical Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React (with React Router)
+- **State Management**: Local state & prop drilling (or Context API if used)
+- **API**: [FakeStore API](https://fakestoreapi.com/)
+- **Styling**: Responsive CSS (Tailwind, Bootstrap, or custom)
+- **Testing**: React Testing Library
