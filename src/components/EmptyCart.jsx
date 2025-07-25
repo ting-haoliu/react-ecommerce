@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import shoppingCartImage from '../assets/empty-cart.png';
-import { ShoppingCartIcon } from './icons';
+import { EmptyCartIcon } from './icons';
 
 const EmptyCart = () => {
    return (
@@ -15,7 +15,7 @@ const EmptyCart = () => {
                {/* Empty Cart Message */}
                <div className="flex flex-col justify-center items-center gap-5 grow p-6">
                   <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
-                     <ShoppingCartIcon
+                     <EmptyCartIcon
                         className="w-6 h-6 text-neutral-900"
                         aria-hidden="true"
                      />

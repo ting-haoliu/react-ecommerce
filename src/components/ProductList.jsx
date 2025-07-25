@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+
 import { getProducts } from '../services/products';
 import ProductCard from './ProductCard';
+
 import { FilterIcon } from './icons';
 import { ArrowDownIcon } from './icons';
 import { SortIcon } from './icons';

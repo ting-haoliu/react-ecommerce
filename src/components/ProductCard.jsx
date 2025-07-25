@@ -1,22 +1,17 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { CartContext } from '../contexts/CartContext';
 
 const ProductCard = ({ product }) => {
-   const handleShowDetails = () => {
-      // Logic to show product details can be implemented here
-      window.alert(`Showing details for product ID: ${product.id}`);
-   };
-
    const { addToCart } = useContext(CartContext);
 
    return (
       <div className="flex flex-col">
-         <button
-            key={product.id}
+         <Link
+            to={`/shop/${product.id}`}
             className="flex-1 group cursor-pointer"
-            onClick={handleShowDetails}
          >
             <img
                alt={product.title}
@@ -24,7 +19,7 @@ const ProductCard = ({ product }) => {
                className="aspect-square rounded-lg bg-gray-200 group-hover:opacity-75 xl:aspect-7/8"
             />
             <h3 className="mt-4 text-xl text-gray-700">{product.title}</h3>
-         </button>
+         </Link>
 
          <div className="flex items-center justify-between mt-4">
             <p className="mt-1 text-lg font-medium text-gray-900">
