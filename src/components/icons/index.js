@@ -7,3 +7,4 @@ export * from './GitHubIcon';
 export * from './ShoppingCartIcon';
 export * from './HamburgerIcon';
 export * from './CloseIcon';
+export * from './HeartIcon';

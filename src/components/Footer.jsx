@@ -21,6 +21,7 @@ const Footer = () => {
                      <h2 className="mb-4 text-sm font-semibold text-gray-700 uppercase">
                         Shopping Guide
                      </h2>
+
                      <ul className="text-gray-500">
                         <li className="mb-4">
                            <Link to="#" className="hover:underline">
@@ -44,6 +45,7 @@ const Footer = () => {
                      <h2 className="mb-4 text-sm font-semibold text-gray-700 uppercase">
                         Customer Service
                      </h2>
+
                      <ul className="text-gray-500">
                         <li className="mb-4">
                            <Link to="#" className="hover:underline">
@@ -67,6 +69,7 @@ const Footer = () => {
                      <h2 className="mb-4 text-sm font-semibold text-gray-700 uppercase">
                         Follow Us
                      </h2>
+
                      <ul className="text-gray-500">
                         <li className="mb-4">
                            <a href="#" className="hover:underline">
@@ -90,6 +93,7 @@ const Footer = () => {
                      <h2 className="mb-4 text-sm font-semibold text-gray-700 uppercase">
                         Legal
                      </h2>
+
                      <ul className="text-gray-500">
                         <li className="mb-4">
                            <a href="#" className="hover:underline">

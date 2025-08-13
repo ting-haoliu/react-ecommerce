@@ -1,11 +1,12 @@
 const API_BASE_URL = 'https://fakestoreapi.com';
 
-export const getProducts = async () => {
+export const fetchProducts = async () => {
    try {
       const response = await fetch(`${API_BASE_URL}/products`, {
          mode: 'cors',
       });
-      if (!response.ok) {
+
+      if (response.status >= 400) {
          throw new Error(`HTTP error: Status ${response.status}`);
       }
 
@@ -17,12 +18,13 @@ export const getProducts = async () => {
    }
 };
 
-export const getProductById = async (id) => {
+export const fetchProductById = async (id) => {
    try {
       const response = await fetch(`${API_BASE_URL}/products/${id}`, {
          mode: 'cors',
       });
-      if (!response.ok) {
+
+      if (response.status >= 400) {
          throw new Error(`HTTP error: Status ${response.status}`);
       }
 

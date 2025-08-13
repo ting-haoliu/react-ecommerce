@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { getProducts } from '../services/products';
+import { fetchProducts } from '../services/products';
 import ProductCard from './ProductCard';
 
 import { FilterIcon } from './icons';
@@ -13,18 +13,16 @@ const ProductList = () => {
    const [loading, setLoading] = useState(true);
 
    useEffect(() => {
-      const fetchProducts = async () => {
-         try {
-            const fetchedProducts = await getProducts();
-            setProducts(fetchedProducts);
-         } catch (err) {
+      fetchProducts()
+         .then((products) => {
+            setProducts(products);
+         })
+         .catch((err) => {
             setError(err.message);
-         } finally {
+         })
+         .finally(() => {
             setLoading(false);
-         }
-      };
-
-      fetchProducts();
+         });
    }, []);
 
    if (loading) {
